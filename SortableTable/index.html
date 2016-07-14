@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+   <title>支持表头冻结的排序表格</title>
+   <style>
+     *{
+		margin:0;
+		padding:0;
+	  }
+
+	table {/*表格的宽度和高度 根据内容自适应*/
+		margin:50px;
+		border-collapse:collapse;
+		text-align:center;
+	  }
+	  
+	p{
+	  color:#999;
+	}  
+   
+   </style>
+</head>
+<body>
+
+   <p>我大前端大前端</p><p>我大前端大前端</p><p>我大前端大前端</p><p>我大前端大前端</p>
+
+   
+   
+   <table id="tb"></table><!-- table中的内容和样式全部动态生成 -->
+  
+  
+  <p>我大前端<br>大前端</p><p>我大前端<br>大前端</p><p>我大前端<br>大前端</p><p>我大前端<br>大前端</p>
+  <p>我大前端<br>大前端</p><p>我大前端<br>大前端</p><p>我大前端<br>大前端</p><p>我大前端<br>大前端</p>
+  <p>我大前端<br>大前端</p><p>我大前端<br>大前端</p><p>我大前端<br>大前端</p><p>我大前端<br>大前端</p>
+  <p>我大前端<br>大前端</p><p>我大前端<br>大前端</p><p>我大前端<br>大前端</p><p>我大前端<br>大前端</p>
+  <p>我大前端<br>大前端</p>
+  
+  
+   <script src="SortableTable.js"></script>
+   
+   <script>
+   
+		var table = document.getElementById("tb");//获得产生表格的位置
+		
+		var init = { //表格的配置参数对象
+			border: "2px solid #ccc",  //表格单元格样式
+			tdWidth: "150px",
+			tdHeight: "50px",
+			fontSize: "18px",
+			lineHeight: "50px",
+			
+			thTrBackground: "#333", //表头样式
+			thTdColor: "#fff",
+			thTdFontWeight: "bold",
+			
+			rowNum: "9",   
+			colNum: "5",
+			thTrContent : ["姓名","语文","数学","英语","总分"],//表头数据
+			tbTrContent : [
+							["小明",80,90,70,240], //表格主体每行的数据
+							["小红",60,90,90,240],
+							["小亮",70,100,60,230],
+							["小文",90,80,80,250],
+							["小李",70,70,70,210], 
+							["小张",60,80,80,220],
+							["小慧",90,80,60,230],
+							["小宁",90,80,80,250]
+						  ],
+			sortable : [2,3,4,5], //选择可排序的列--默认无排序功能
+            FrozenThead : true   //选择是否冻结表头--默认不冻结	
+            //只有最后两个参数是可选的			
+		};
+		
+		
+		var Stable = new SortableTable(table,init);
+		
+		Stable.genTable();
+		
+   
+   </script>
+   
+</body>
+</html>

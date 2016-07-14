@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+   <head>
+     <meta charset="utf-8">
+     <title>试用日历组件</title>
+     <link rel="stylesheet" href="calendar.css">	
+     <style>
+	    *{
+			padding:0;
+			margin:0;
+		}
+		.showCalendar{
+			width:320px;
+			padding:20px;
+			margin:0 auto;
+			margin-top:100px;
+			text-align:left;
+		}
+		.showCalendar input {
+			display:inline-block;
+			width:200px;
+			height:30px;
+			border:1px solid #ccc;
+			padding:5px;
+			text-align:center;
+			background-color:#FFC;
+			color:#636;
+			font-size:18px;
+			line-height:30px;
+			font-family:serif;
+		}
+		#calendar{
+		   display:none;
+		}
+	 
+	 </style>	 
+   </head>
+    <body>
+	  <div class="showCalendar">
+	  
+	    <input type="text" name="getDate"><br><!-- 文本框可以显示日历选中日期,默认显示当前日期-->
+	    
+		<div id="calendar"></div><!--日历组件的引入位置 -->
+		
+      <div>	
+	  
+	  <script src="calendar.js"></script>
+	  <script>
+	     
+		var getDate   = document.getElementsByName("getDate")[0],
+	    calElem  = document.querySelector("#calendar");		
+		
+		var cal = new Calendar({
+			element : calElem,
+			showDate : getDate,
+			callback : function(){
+				alert(getDate.value)
+			}
+		});	
+							
+		//点击文本框实现日历面板显示和隐藏的切换
+		addHandler(getDate,"click",function(){
+
+			if(calElem.style.display == "block"){
+				calElem.style.display="none";
+			}else{
+				calElem.style.display="block";
+			}
+		}); 
+		
+		function addHandler(element, type, handler){
+			if(element.addEventListener) {
+				addHandler = function(element, type, handler) {
+					element.addEventListener(type, handler, false);
+				};
+			} else if (element.attachEvent) {
+				addHandler = function(element, type, handler) {
+					element.attachEvent("on"+type, handler);
+				};
+			} else {
+				addHandler = function(element, type, handler) {
+					element["on"+type] = handler;
+				};
+			}
+			return addHandler(element, type, handler);
+		}	
+	  
+	  </script>  
+</html>
