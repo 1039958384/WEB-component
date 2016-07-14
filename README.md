@@ -41,7 +41,7 @@ index.js
 require.js 是一个 AMD规范的 JavaScript 文件和模块加载器，可以提高代码加载速度。它通过define定义模块、声明模块依赖，通过require定义程序的执行入口。
 ## 本仓库中的 WEB 组件说明
 
-1. 日历组件(Calendar) ：[Demo](https://1039958384.github.io/WEB-component/Layer/);
-2. 弹出层组件(Layer) ：[Demo](https://1039958384.github.io/WEB-component/Calendar/);
+1. 弹出层组件(Layer) ：[Demo](https://1039958384.github.io/WEB-component/Layer/);
+2. 日历组件(Calendar) ：[Demo](https://1039958384.github.io/WEB-component/Calendar/);
 3. 支持表头冻结的可排序表格组件(SortableTable) ：[Demo](https://1039958384.github.io/WEB-component/SortableTable/);
 4. 文本编辑器组件()
