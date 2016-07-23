@@ -48,4 +48,4 @@ require.js 是一个 AMD规范的 JavaScript 文件和模块加载器，可以�
 
 3. 支持表头冻结的可排序表格组件(SortableTable) ：[Demo](https://1039958384.github.io/WEB-component/SortableTable/);
 
-4. 文本编辑器组件()
+4. 富文本编辑器组件(Editor) : [Demo](https://1039958384.github.io/WEB-component/Editor/)。
