@@ -1,0 +1,143 @@
+* {
+	margin:0;
+	padding:0;
+}
+#Editor {
+	margin:10px;
+	border:1px solid #C5C5C5;
+	min-width: 520px;
+}
+#Editor .toolBar {
+    padding-left:4px;
+	list-style:none;
+	background:url(./images/bg.gif) repeat-x left center;
+    height:30px;
+	border-bottom:1px solid #C5C5C5;
+}
+#Editor .toolBar li {
+	display:inline;
+	cursor:pointer;
+}
+#Editor .toolBar .line {
+	display:block;
+	height:23px;
+	width:4px;
+	margin:0 2px;
+	margin-top:5px;
+	float:left;
+	border-left:3px solid #693;
+}
+#Editor .toolBar .viewHTML {
+	display:block;
+	float:left;
+	width:20px;
+	height:20px;
+	overflow:hidden;
+	margin-top:5px;
+}
+#Editor .toolBar .viewHTML input {
+	display:block;
+	width:20px;
+	height:20px;
+	margin:0;
+	float:left;
+}
+#Editor .toolBar li {
+	display:block;
+	height:22px;
+	float:left;
+	width:28px;
+	margin:5px 2px 5px 2px;
+}
+#Editor .toolBar li img {
+	display:block;
+	margin:1px auto;
+}
+
+#Editor .toolBar .fontNameBtn ul {
+	position:relative;/*必须设置position为relative或absolute才可以获取焦点*/
+	width:120px;
+	border:1px solid #ccc;
+    background:#fff;
+    display:none;
+}
+#Editor .toolBar .fontNameBtn ul  li{
+	cursor:pointer;
+	float:none;
+	width:95%;
+	white-space:nowrap;
+    font-size:12px;
+	line-height:23px;
+}
+
+
+#Editor .toolBar .fontSizeBtn ul {
+	position:relative;/*必须设置position为relative或absolute才可以获取焦点*/
+	
+	width:60px;
+	border:1px solid #ccc;
+    background:#fff;
+    display:none;
+}
+#Editor .toolBar .fontSizeBtn ul  li{
+	float:none;
+	width:95%;
+	font-size:12px;
+	line-height:23px;
+	white-space:nowrap; 
+	cursor:pointer;
+}
+
+
+
+#Editor ul.toolBar img {/*IE*/
+	border:none;
+}
+
+#Editor .content {
+	width:100%;
+	height:340px;
+	border:none;
+	display:block;
+}
+#Editor iframe#EditorFrame {
+	width:100%;
+	height:340px;
+	border:none;
+}
+
+#Editor  table.portraitTable {
+	position:absolute;
+	left:400px;
+	top:40px;
+	border:2px solid #EEE;
+	z-index:10;
+	background:white;
+	display:none;
+}
+#Editor table.portraitTable caption,table.colorTable caption {
+	background:#EEE;
+	color:blue;
+	height:20px;
+	line-height:20px;
+	padding-top:2px;
+}
+#Editor table.portraitTable td {
+	border:1px solid #EEE;
+	cursor:pointer;
+}
+#Editor table.colorTable {
+	position:absolute;
+	left:300px;
+	top:40px;
+	display:none;
+	border:2px solid #EEE;
+	background:white;
+}
+#Editor table.colorTable  td {
+	width:12px;
+	height:12px;
+	font-size:1px;
+	cursor:pointer;
+	border:none;
+}
