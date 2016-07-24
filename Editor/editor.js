@@ -54,9 +54,9 @@
 			var FrameWin = EditorFrame.contentWindow;
 			var FrameDoc = FrameWin.document;
 			FrameDoc.designMode = "on";//设置为可编辑
-			FrameDoc.contentEditable=true;
+			
 			FrameDoc.write("<!DOCTYPE html><html><head><title>Content</title><style type='text/css'> body {margin:0;padding:10px;}</style></head><body> </body></html>");
-			FrameDoc.close();
+			FrameDoc.close();//防止网页一直处于加载状态
 			
 			//添加事件交互
             this.addEvent();			
