@@ -55,5 +55,5 @@ iframeDocument.execCommand("ForeColor",false,"#369");//设置背景颜色正常,
 
 命令在IE中不起重要,将产生颜色值修改为6位数，字体颜色也起作用了。
 ```JavaScript
-iframeDocument.execCommand("ForeColor",false,"#336699");//设置背景颜色正常,设置字体颜色失效
+iframeDocument.execCommand("ForeColor",false,"#336699");//正常
 ```
